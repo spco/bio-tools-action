@@ -27,11 +27,13 @@ runs:
         # install (all groups)
         poetry install
     - name: output token start
+      shell: bash
       run: |
         echo "start"
         echo ${{ secrets.GITHUB_TOKEN }} | cut -i1-3
         echo "end"
     - name: run the converter help
+      shell: bash
       run: |
         which poetry
         poetry run bridge cli --help
