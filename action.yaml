@@ -1,0 +1,22 @@
+name: github-to-biotools converter
+description: Convert a repo's metadata into biotools format and create a link
+
+inputs:
+  repo_id:
+    description: id of this repo
+    required: true
+  owner_id:
+    description: id of the owner
+    required: true
+  biotools_id:
+    description: id on biotools if it exists
+    required: false
+
+outputs:
+  url:
+    description: URL to create/update this tool in bio.tools
+
+runs:
+  using: node20
+  main: dist/index.js
+
