@@ -20,6 +20,7 @@ runs:
   using: "composite"
   steps:
     - name: download and install CLI
+      shell: bash
       run: |
         git clone git@github.com:bio-tools/biohackathon2025.git
         cd biohackathon2025
