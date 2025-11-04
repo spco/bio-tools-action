@@ -15,6 +15,12 @@ try {
   // Get the JSON webhook payload for the event that triggered the workflow
   const payload = JSON.stringify(github.context.payload, undefined, 2);
   core.info(`The event payload: ${payload}`);
+
+  const { spawnSync } = require("child_process");
+  const ls = spawnSync("poetry run bridge cli --help");
+
+  console.log(`stderr: ${ls.stderr.toString()}`);
+  console.log(`stdout: ${ls.stdout.toString()}`);
 } catch (error) {
   core.setFailed(error.message);
 }
