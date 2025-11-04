@@ -31,7 +31,7 @@ runs:
       shell: bash
       run: |
         echo "start"
-        echo ${{ secrets.GITHUB_TOKEN }} | cut -i1-3
+        echo $GITHUB_TOKEN | cut -i1-3
         echo "end"
     - name: run the converter help
       shell: bash
