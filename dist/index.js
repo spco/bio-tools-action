@@ -8,9 +8,9 @@ try {
   const owner_id = core.getInput("owner_id");
   core.info(`Repo full path is ${owner_id}/${repo_id}`);
 
-  //   // Get the current time and set it as an output variable
-  //   const time = new Date().toTimeString();
-  //   core.setOutput("time", time);
+  // Get the current time and set it as an output variable
+  const url = `${owner_id}/${repo_id}`;
+  core.setOutput("url", url);
 
   // Get the JSON webhook payload for the event that triggered the workflow
   const payload = JSON.stringify(github.context.payload, undefined, 2);
