@@ -19,8 +19,8 @@ try {
   const { spawnSync } = require("child_process");
   const ls = spawnSync("poetry run bridge cli --help");
 
-  console.log(`stderr: ${ls.stderr.toString()}`);
-  console.log(`stdout: ${ls.stdout.toString()}`);
+  core.info(`stderr: ${ls.stderr.toString()}`);
+  core.info(`stdout: ${ls.stdout.toString()}`);
 } catch (error) {
   core.setFailed(error.message);
 }
