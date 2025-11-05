@@ -26,6 +26,7 @@ runs:
     - name: install CLI
       shell: bash
       run: |
+        pipx install poetry
         # install (all groups)
         poetry install
     - name: output token start
