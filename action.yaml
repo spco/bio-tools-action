@@ -33,7 +33,7 @@ runs:
       shell: bash
       run: |
         echo "start"
-        echo $GITHUB_TOKEN | cut -i1-3
+        echo $GITHUB_TOKEN | cut -c1-3
         echo "end"
     - name: run the converter help
       shell: bash
