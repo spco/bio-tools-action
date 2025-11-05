@@ -35,8 +35,9 @@ runs:
         echo "start"
         echo $GITHUB_TOKEN | cut -c1-3
         echo "end"
-    - name: run the converter help
+    - name: run the converter
       shell: bash
       run: |
         which poetry
-        poetry run bridge cli --help
+        echo ${{ inputs.owner_id }} ${{ inputs.repo_id }}
+        poetry run bridge cli github-to-biotools extract ${{ inputs.owner_id }} ${{ inputs.repo_id }}
