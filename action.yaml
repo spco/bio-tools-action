@@ -33,7 +33,4 @@ runs:
     - name: run the converter
       shell: bash
       run: |
-        result=$(poetry run bridge cli github-to-biotools extract ${{ inputs.owner_id }} ${{ inputs.repo_id }})
-        echo $result
-        echo "***this is a test!***"
-        echo $result
+        poetry run bridge cli github-to-biotools extract ${{ inputs.owner_id }} ${{ inputs.repo_id }}
