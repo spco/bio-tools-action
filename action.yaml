@@ -26,10 +26,6 @@ runs:
     - name: install CLI
       shell: bash
       run: |
-        pwd
-        ls
-        cd biohackathon2025
-
         # install (all groups)
         poetry install
     - name: output token start
