@@ -8,13 +8,9 @@ inputs:
   owner_id:
     description: id of the owner
     required: true
-  biotools_id:
-    description: id on biotools if it exists
-    required: false
-
-outputs:
-  url:
-    description: URL to create/update this tool in bio.tools
+  # biotools_id:
+  #   description: id on biotools if it exists
+  #   required: false
 
 runs:
   using: "composite"
